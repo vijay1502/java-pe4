@@ -1,6 +1,6 @@
 package com.stackroute.pe4;
 
-//public class NamePresence {
+public class NamePresence {
 //    public String nameIndicator(String inputWord) {
 //        if (!inputWord.contains("Harry")) {
 //            System.out.println("**");
@@ -14,17 +14,16 @@ package com.stackroute.pe4;
 //        }
 //    }
 //}
-public class NamePresence {
-    static String inputWord = "hhbsdhad dsa";
-    public static void main(String[] args) {
+public String namePresense(String inputWord) {
         if (inputWord.contains("Harry")) {
-            System.out.println("Is Harry Here?" + inputWord.contains("Harry"));
-        } else {
-            System.out.println("elseee");
-            boolean result = inputWord.contains("Harry");
-            System.out.println("Is Harry Here?" + result);
+        String result= "Is Harry Here?" + inputWord.contains("Harry");
+        return result;
+//            System.out.println();
         }
-    }
-
-
-}
+        else {
+//            System.out.println("elseee");
+        boolean result = inputWord.contains("Harry");
+        String result1= "Is Harry Here?" + result;
+        return  result1;
+        }
+        }}

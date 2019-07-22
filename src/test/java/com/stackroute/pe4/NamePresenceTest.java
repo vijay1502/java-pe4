@@ -19,12 +19,12 @@ NamePresence namePresence;
     }
 @Test
     public void givenAStringShouldReturnStringWhetheritContainsNameOrNot(){
-        String actualResult=namePresence.nameIndicator("This is Harry");
+        String actualResult=namePresence.namePresense("This is Harry");
         assertEquals("Is Harry Here?true",actualResult);
 }
     @Test
     public void givenAStringShouldReturnStringIfNameIsNotPresent(){
-        String actualResult=namePresence.nameIndicator("This is ABC");
+        String actualResult=namePresence.namePresense("This is ABC");
         assertEquals("Is Harry Here?false",actualResult);
     }
 }
