@@ -30,4 +30,11 @@ SubStringCounter subStringCounter;
         assertNotNull(actualResult);
         assertEquals(output,actualResult);
     }
+
+    @Test
+    public void givenAStringShouldReturnStringIfInputStringDoesNotHaveSubString(){
+        String output="The given substring is not present";
+        String actualResult=subStringCounter.subStringFrequency("Band in land","ay");
+        assertEquals(output,actualResult);
+    }
 }
