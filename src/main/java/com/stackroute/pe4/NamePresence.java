@@ -1,5 +1,8 @@
 package com.stackroute.pe4;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class NamePresence {
 //    public String nameIndicator(String inputWord) {
 //        if (!inputWord.contains("Harry")) {
@@ -14,16 +17,9 @@ public class NamePresence {
 //        }
 //    }
 //}
-public String namePresense(String inputWord) {
-        if (inputWord.contains("Harry")) {
-        String result= "Is Harry Here?" + inputWord.contains("Harry");
-        return result;
-//            System.out.println();
-        }
-        else {
-//            System.out.println("elseee");
-        boolean result = inputWord.contains("Harry");
-        String result1= "Is Harry Here?" + result;
-        return  result1;
-        }
-        }}
+public boolean namePresence(String input){
+        String [] data = input.split(" ");
+        boolean matches = Pattern.matches("Harry",data[2]);
+       /* System.out.println("Is Harry here? "+matches);*/
+        return matches;
+}}
