@@ -26,6 +26,13 @@ CharacterReplacement characterReplacement;
     @Test
     public void givenAStringShouldReturnErrorStringIfNull(){
         String actualResult=characterReplacement.characterReplace(null);
+        assertNotNull(actualResult);
         assertEquals("null value cannot be passed",actualResult);
+    }
+
+    @Test
+    public void givenAStringShouldReturnStringIfCharacterDoesNotExist(){
+        String actualResult=characterReplacement.characterReplace("Henry Hat");
+        assertEquals("No character character is present in string to be replaced",actualResult);
     }
 }
