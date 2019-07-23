@@ -5,7 +5,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SubStringCounter {
-    public String matching(String inputString,String givenString){
+    public String subStringFrequency(String inputString,String givenString){
+        if(inputString!=null){
         StringBuffer stringBuffer=new StringBuffer();
         Pattern pattern=Pattern.compile(givenString);
         Matcher matcher=pattern.matcher(inputString);
@@ -14,4 +15,5 @@ public class SubStringCounter {
         }
         return stringBuffer.toString().trim();
     }
+    else return "we cannot get output if input is null";}
 }

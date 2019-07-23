@@ -17,14 +17,15 @@ NamePresence namePresence;
     public void tearDown() throws Exception {
         namePresence=null;
     }
-@Test
-    public void givenAStringShouldReturnStringWhetheritContainsNameOrNot(){
-        boolean actualResult=namePresence.namePresence("This is Harry");
-        assertEquals(true,actualResult);
-}
+
     @Test
-    public void givenAStringShouldReturnStringIfNameIsNotPresent(){
-        boolean actualResult=namePresence.namePresence("This is ABC");
-        assertEquals(false,actualResult);
+    public void givenAStringShouldReturnString(){
+        String actualResult=namePresence.naming("This is ABC","Harry");
+        assertEquals("Is Harry There?false",actualResult);
+    }
+    @Test
+    public void givenAStringShouldReturnStringA(){
+        String actualResult=namePresence.naming("This is Harry","Harry");
+        assertEquals("Is Harry There?true",actualResult);
     }
 }

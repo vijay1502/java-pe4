@@ -22,4 +22,10 @@ CharacterReplacement characterReplacement;
         String actualResult=characterReplacement.characterReplace("daily dry");
         assertEquals("faity fry",actualResult);
     }
+
+    @Test
+    public void givenAStringShouldReturnErrorStringIfNull(){
+        String actualResult=characterReplacement.characterReplace(null);
+        assertEquals("null value cannot be passed",actualResult);
+    }
 }

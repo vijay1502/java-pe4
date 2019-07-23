@@ -17,9 +17,13 @@ public class NamePresence {
 //        }
 //    }
 //}
-public boolean namePresence(String input){
-        String [] data = input.split(" ");
-        boolean matches = Pattern.matches("Harry",data[2]);
-       /* System.out.println("Is Harry here? "+matches);*/
-        return matches;
+
+public String naming(String string,String name){
+
+                Pattern pattern=Pattern.compile(name);
+                Matcher matcher=pattern.matcher(string);
+                String output="Is Harry There?"+matcher.find();   // Returns boolean value if pattern is found
+                return output;
+
+
 }}

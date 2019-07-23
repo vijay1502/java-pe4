@@ -19,7 +19,13 @@ CharacterCount characterCount;
     }
     @Test
     public void givenAStringShouldReturnLengthOfRepeatedCharacter(){
-        int actualOutput=characterCount.characterCounter("THis is an intelligent dog","i");
-        assertEquals(4,actualOutput);
+        String actualOutput=characterCount.characterCounter("THis is an intelligent dog","i");
+        assertEquals("count is 4",actualOutput);
+    }
+
+    @Test
+    public void givenAStringShouldReturnErrorIfNull(){
+        String actualOutput=characterCount.characterCounter(null,"i");
+        assertEquals("null is not allowed",actualOutput);
     }
 }
