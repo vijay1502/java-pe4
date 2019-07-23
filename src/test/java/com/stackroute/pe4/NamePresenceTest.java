@@ -19,13 +19,19 @@ NamePresence namePresence;
     }
 
     @Test
-    public void givenAStringShouldReturnString(){
+    public void givenAStringShouldReturnStringFlaseIfWordNotFound(){
         String actualResult=namePresence.naming("This is ABC","Harry");
         assertEquals("Is Harry There?false",actualResult);
     }
     @Test
-    public void givenAStringShouldReturnStringA(){
+    public void givenAStringShouldReturnStringTrueIfWordIsFound(){
         String actualResult=namePresence.naming("This is Harry","Harry");
         assertEquals("Is Harry There?true",actualResult);
+    }
+
+    @Test
+    public void givenAStringShouldReturnStringErrorIfNull(){
+        String actualResult=namePresence.naming(null,"Harry");
+        assertEquals("Null cannot be accepted as input",actualResult);
     }
 }
