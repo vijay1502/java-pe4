@@ -28,4 +28,12 @@ CharacterCount characterCount;
         String actualOutput=characterCount.characterCounter(null,"i");
         assertEquals("null is not allowed",actualOutput);
     }
+
+
+    @Test
+    public void givenAStringShouldReturnStringMessageIfCharacterIsAbsent(){
+        String actualOutput=characterCount.characterCounter("This is good","z");
+        assertEquals("given character is not present in the string",actualOutput);
+    }
 }
+
